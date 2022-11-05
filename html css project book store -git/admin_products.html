@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>products</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom admin css file link  -->
+   <link rel="stylesheet" href="css/admin_style.css">
+
+</head>
+<body>
+
+
+    <header class="header">
+
+        <div class="flex">
+      
+           <a href="admin_page.html" class="logo">Admin<span>Panel</span></a>
+      
+           <nav class="navbar">
+              <a href="admin_page.html">home</a>
+              <a href="admin_products.html">products</a>
+              <a href="admin_orders.html">orders</a>
+              <a href="admin_users.html">users</a>
+              <a href="admin_contacts.html">messages</a>
+           </nav>
+      
+           <div class="icons">
+              <div id="menu-btn" class="fas fa-bars"></div>
+              <div id="user-btn" class="fas fa-user"></div>
+           </div>
+      
+           <div class="account-box">
+              <p>username : <span>inzamam</span></p>
+              <p>email : <span>12345</span></p>
+              <a href="logout.html" class="delete-btn">logout</a>
+              <div>new <a href="login.html">login</a> | <a href="register.html">register</a></div>
+           </div>
+      
+        </div>
+      
+      </header>
+
+
+
+
+<section class="add-products">
+
+   <h1 class="title">shop products</h1>
+
+   <form action="" method="post" enctype="multipart/form-data">
+      <h3>add product</h3>
+      <input type="text" name="name" class="box" placeholder="enter product name" required>
+      <input type="number" min="0" name="price" class="box" placeholder="enter product price" required>
+      <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
+      <input type="submit" value="add product" name="add_product" class="btn">
+   </form>
+
+</section>
+
+
+<!-- show products  -->
+
+<section class="show-products">
+
+   <div class="box-container">
+
+   
+      <div class="box">
+         <img src="images/bash_and_lucy-2.jpg" alt="">
+         <div class="name">Bash</div>
+         <div class="price">20$</div>
+         <a href="admin_products.html" class="option-btn">update</a>
+         <a href="admin_products.html" class="delete-btn" >delete</a>
+      </div>
+      
+        <p class="empty">no products added yet!</p>;
+     
+   </div>
+
+</section>
+
+<section class="edit-product-form">
+
+  
+   <form action="" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="update_p_id" value=" ">
+      <input type="hidden" name="update_old_image" value=" ">
+      <img src="images/clever_lands.jpg" alt="uploded image is here">
+      <input type="text" name="update_name" value="" class="box" required placeholder="enter product name">
+      <input type="number" name="update_price" value="" min="0" class="box" required placeholder="enter product price">
+      <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
+      <input type="submit" value="update" name="update_product" class="btn">
+      <input type="reset" value="cancel" id="close-update" class="option-btn">
+   </form>
+   
+    
+
+</section>
+
+
+
+
+</body>
+</html>
